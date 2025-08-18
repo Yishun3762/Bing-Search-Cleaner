@@ -14,8 +14,15 @@
     const url = new URL(window.location.href);
     const q = url.searchParams.get('q');
     if (q) {
-        const cleanUrl = `https://www.bing.com/search?q=${encodeURIComponent(q)}`;
-        if (window.location.href !== cleanUrl) {
+        let cleanUrl;
+        if (url.hostname === 'www.bing.com') {
+            cleanUrl = `https://cn.bing.com/search?q=${encodeURIComponent(q)}&setlang=zh-CN`;
+        }
+        else if (url.hostname === 'cn.bing.com') {
+            cleanUrl = `https://cn.bing.com/search?q=${encodeURIComponent(q)}&setlang=zh-CN`;
+        }
+        // 如果当前URL与目标URL不同，则进行重定向
+        if (cleanUrl && window.location.href !== cleanUrl) {
             window.location.replace(cleanUrl);
         }
     }
