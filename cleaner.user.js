@@ -5,6 +5,7 @@
 // @description Automatically redirect Bing search to a clean URL with only the 'q' parameter to remove ads
 // @author      AsagiYuumoya
 // @match       https://www.bing.com/search?*
+// @match       https://cn.bing.com/search?*
 // @grant       none
 // @run-at      document-start
 // ==/UserScript==
