@@ -16,7 +16,7 @@
     if (q) {
         let cleanUrl;
         if (url.hostname === 'www.bing.com') {
-            cleanUrl = `https://cn.bing.com/search?q=${encodeURIComponent(q)}&setlang=zh-CN`;
+            cleanUrl = `https://www.bing.com/search?q=${encodeURIComponent(q)}&setlang=zh-CN`;
         }
         else if (url.hostname === 'cn.bing.com') {
             cleanUrl = `https://cn.bing.com/search?q=${encodeURIComponent(q)}&setlang=zh-CN`;
